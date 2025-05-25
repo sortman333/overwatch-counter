@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/overwatch-counter/static/js/main.71e5f77d.js",
+    "index.html": "/overwatch-counter/index.html",
+    "main.71e5f77d.js.map": "/overwatch-counter/static/js/main.71e5f77d.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.71e5f77d.js"
+  ]
+}

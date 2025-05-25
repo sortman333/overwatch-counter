@@ -1,0 +1,496 @@
+<html xmln:x="urn:schemas-microsoft-com:office:excel"> 	<head> 		<meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8"> 		<xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet> 			<x:Name>Excel Sheet</x:Name> 			<x:WorksheetOptions><x:Panes></x:Panes></x:WorksheetOptions> 		</x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml> 	</head> 	<body> 
+	<table border="1">
+		<tbody><tr>
+			<td align="center">
+				<span data-bind-text="this_excel_caption">25년1월 이용대금명세서(신용카드)</span>
+			</td>
+		</tr>
+	    <tr>
+	        <td>
+	        	<table border="1">
+					<caption>이용대금명세서목록</caption>
+		            <colgroup>
+		                <col style="width:15%">
+		                <col style="width:13%">
+		                <col style="width:10%">
+		                <col style="width:auto">
+		                <col style="width:20%">
+		            </colgroup>
+					<thead>
+						<tr>
+						   <th scope="col">카드부분</th>
+		                   <th scope="col">결제일</th>
+		                   <th scope="col">결제순번</th>
+		                   <th scope="col" colspan="2">결제계좌</th>
+		                   <th scope="col" colspan="2">명세서수령방법</th>	<!-- C2022100664191_HPG 엑셀 다운로드 이용대금 명세서 문구 수정 요청의 件 -->
+		            	</tr>
+					</thead>
+					<tbody>
+		               <tr>
+		                   <td data-bind-text="excelInfo.cardNm">신한카드</td>
+		                   <td data-bind-text="excelInfo.comm_snc_d">2025.01.14</td>
+		                   <td style="mso-number-format:&quot;\@&quot;;" data-bind-text="excelInfo.sncSeq">0002</td>	<!-- C2022100664191_HPG 엑셀 다운로드 이용대금 명세서 문구 수정 요청의 件 -->
+		                   <td data-bind-text="excelInfo.accNo" colspan="2">신한은행 / 11053*****72</td>
+		                   <td data-bind-text="excelInfo.l_s_mtx_stmt_acpt_mtd" colspan="2">모바일(신한 SOL페이)</td>
+		               </tr>
+		           </tbody>
+				</table>
+	        </td>
+	    </tr>
+	    <tr>
+	    	<td>
+		    	<ul>
+			        <li>※ <strong>이용대금명세서 작성(<span data-bind-text="excelInfo.comm_info_end_d"></span>) 이후 발생한 매출취소 및 선결제 금액은 명세서에 반영되지 않습니다.</strong><br>변경된 결제잔액은 <strong>당일결제잔액조회</strong>에서 확인하시기 바랍니다.</li>
+			        <li>※ 명세서 제작일(보통 해당 결제일의 10일 전후)에는 당월 명세서가 조회안될 수 있으며,<br>이 경우 다음날 조회하시면 정상적으로 조회되오니 참고하시기 바랍니다. </li>
+			        <li>※ 최근 1개월내 자동이체변경 시 실제인출 계좌가 상이할 수 있으므로 확인하시기 바랍니다.</li>
+			    </ul>
+		    </td>
+	    </tr>
+	</tbody></table>
+	<br>
+	<table border="1">
+	    <tbody><tr>
+	        <td align="center"><b>카드이용금액</b></td>
+	        <td rowspan="2" width="2">&nbsp;</td>
+	        <td align="center"><b>요약정보</b></td>
+	    </tr>
+	    <tr>
+	        <td>
+	            <table border="1">
+	                <tbody><tr>
+						<td>
+							<strong>신용카드 </strong>
+							<strong data-bind-text="lData12474_excel.comm_rcp_uma">395,354</strong>
+							<strong>원</strong>
+	                	</td>
+					</tr>
+	                <tr>
+						<td>
+							<table border="1">
+								<caption>카드이용금액</caption>
+								<colgroup>
+									<col style="width:25%">
+									<col style="width:35%">
+									<col style="width:40%">
+								</colgroup>
+								<thead>
+								  <tr>
+									  <th>월구분</th>
+									  <th>사용 분류</th>
+									  <th>이용 금액</th>
+								  </tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<th scope="row" colspan="2">입금하실 금액</th>
+										<td style="text-align: right;" data-bind-text="lData12474_excel.comm_rcp_uma">395,354</td>	<!-- C2022100664191_HPG 엑셀 다운로드 이용대금 명세서 문구 수정 요청의 件 -->
+									</tr>
+								</tfoot>
+								<tbody>
+									<tr>
+										<th scope="row"><span>전월</span></th>
+										<th>전월미결제금액</th>
+										<td data-bind-text="lData12474_excel.comm_bf_m_un_st_at">0</td>
+									</tr>
+									<tr>
+										<th scope="row"><span>전월</span></th>
+										<th>연체이자</th>
+										<td data-bind-text="lData12474_excel.comm_bf_m_dyga">0</td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="2">소계</th>
+										<td style="text-align: right;" data-bind-text="lData12474_excel.comm_bf_m_sm">0</td>	<!-- C2022100664191_HPG 엑셀 다운로드 이용대금 명세서 문구 수정 요청의 件 -->
+									</tr>
+									<tr>
+										<th scope="row">당월</th>
+										<th>대출금</th>
+										<td data-bind-text="lData12474_excel.comm_lon_sm">0</td>
+									</tr>
+									<tr>
+										<th scope="row"><span>당월</span></th>
+										<th>할부</th>
+										<td data-bind-text="lData12474_excel.comm_ns_sm">89,890</td>
+									</tr>
+									<tr>
+										<th scope="row"><span>당월</span></th>
+										<th>현금서비스</th>
+										<td data-bind-text="lData12474_excel.comm_cv_sm">0</td>
+									</tr>
+									<tr>
+										<th scope="row"><span>당월</span></th>
+										<th>일시불</th>
+										<td data-bind-text="lData12474_excel.comm_p_sm">305,464</td>
+									</tr>
+									<tr>
+										<th scope="row"><span>당월</span></th>
+										<th>해외이용</th>
+										<td data-bind-text="lData12474_excel.comm_vs_ue_sm">0</td>
+									</tr>
+									<tr>
+										<th scope="row"><span>당월</span></th>
+										<th>일부결제금액이월약정(리볼빙)</th>
+										<td data-bind-text="lData12474_excel.comm_vv_sm">0</td>
+									</tr>
+									<tr>
+										<th scope="row"><span>당월</span></th>
+										<th>연회비</th>
+										<td data-bind-text="lData12474_excel.comm_afe_at">0</td>
+									</tr>
+									<tr>
+										<th scope="row"><span>당월</span></th>
+										<th>하이세이브</th>
+										<td data-bind-text="lData12474_excel.comm_hisv_csb">0</td>
+									</tr>
+									<tr>
+										<th scope="row" colspan="2">소계</th>
+										<td style="text-align: right;" data-bind-text="lData12474_excel.comm_cmt_uma">395,354</td>	<!-- C2022100664191_HPG 엑셀 다운로드 이용대금 명세서 문구 수정 요청의 件 -->
+									</tr>
+								</tbody>
+							</table>
+	                	</td>
+					</tr>
+	            </tbody></table>
+	        </td>
+	        <td>
+	            <table border="1">
+	                <tbody><tr>
+	                	<td data-bind-each="mData12474_1"></td>
+	                </tr>
+	                <tr><td>
+	                	<table border="1">
+	                        <caption>마이신한포인트</caption>
+	                        <colgroup>
+	                            <col style="width:40%">
+	                            <col style="width:28%">
+	                            <col style="width:32%">
+	                        </colgroup>
+	                        <thead>
+	                          <tr>
+	                              <th>포인트명</th>
+	                              <th>잔여</th>
+	                              <th><span data-bind-text="lData12474_excel.pointExtinctionMonth">02</span>월 소멸예정</th>
+	                          </tr>
+	                        </thead>
+	                        <tbody data-bind-each="mData12474_2"></tbody>
+	                    </table>
+	                </td></tr>
+	                <tr><td>&nbsp;</td></tr>
+	                <tr>
+						<td align="center"><b>이번달 받으실 혜택</b></td>
+					</tr>
+	                <tr>
+						<td>
+							<strong>총 혜택금액 </strong>
+							<strong data-bind-text="lData12474_excel.comm_dc_dsm_sm">5,648</strong>
+							<strong>원</strong>
+	                	</td>
+					</tr>
+	                <tr>
+						<td>
+							<table border="1">
+								<caption>이달에 할인된 금액</caption>
+								<colgroup>
+									<col style="width:">
+									<col style="width:">
+								</colgroup>
+								<thead>
+								  <tr>
+									  <th>할인 분류</th>
+									  <th>할인 금액</th>
+								  </tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>이용금액할인</td>
+										<td data-bind-text="lData12474_excel.comm_uea_dc">0</td>
+									</tr>
+									<tr>
+										<td>탑스할인</td>
+										<td data-bind-text="lData12474_excel.comm_tps_dc">0</td>
+									</tr>
+									<tr>
+										<td>연회비면제</td>
+										<td data-bind-text="lData12474_excel.comm_afe_exo">0</td>
+									</tr>
+									<tr>
+										<td>복지할인</td>
+										<td data-bind-text="lData12474_excel.comm_wf_dca">0</td>
+									</tr>
+								</tbody>
+							</table>
+	                	</td>
+					</tr>
+	                <tr>
+						<td>
+							<strong>총 혜택금액 </strong>
+							<strong data-bind-text="lData12474_excel.comm_dc_dsm_sm_fe">5,648</strong>
+							<strong>원</strong>
+	                	</td>
+					</tr>
+	                <tr>
+						<td>
+							<table border="1">
+								<caption>이달에 할인된 수수료/이자</caption>
+								<colgroup>
+									<col style="width:">
+									<col style="width:">
+								</colgroup>
+								<thead>
+								  <tr>
+									  <th>할인 분류</th>
+									  <th>할인 금액</th>
+								  </tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>이용금액 할인</td>
+										<td data-bind-text="lData12474_excel.comm_fe_ir_dc">0</td>
+									</tr>
+									<tr>
+										<td>Tops 무이자할부</td>
+										<td data-bind-text="lData12474_excel.comm_tps_nn_ir_ns_dc">0</td>
+									</tr>
+									<tr>
+										<td>무이자할부</td>
+										<td data-bind-text="lData12474_excel.comm_nn_ir_ns">5,648</td>
+									</tr>
+								</tbody>
+							</table>
+	               		</td>
+					</tr>
+				</tbody></table>
+	        </td>
+	    </tr>
+	     <tr>
+	        <td colspan="3">
+	        	<p>
+	        		<strong>이용기간  일시불/할부:<span data-bind-text="lData12474_excel.comm_cl_cdg_trm_sr_dd_k">2024.12.01</span> ~ <span data-bind-text="lData12474_excel.comm_cl_cdg_trm_ed_dd_k">2024.12.31</span></strong>
+	        		<strong> 현금서비스: <span data-bind-text="lData12474_excel.comm_cv_cdg_trm_sr_dd_k">2024.11.15</span> ~ <span data-bind-text="lData12474_excel.comm_cv_cdg_trm_ed_dd_k">2024.12.16</span></strong>
+	            </p>
+	        </td>
+	    </tr>
+	</tbody></table>
+	<br>
+	
+	<table border="1">
+	    <tbody><tr>
+	        <td>
+	        	<table border="1" data-bind-visible="visibleBody" style="">
+		            <caption>이용일자별 카드사용내역</caption>
+		            <colgroup>
+		                <col style="width:9%">
+		                <col style="width:6%">
+		                <col style="width:auto">
+		                <col style="width:11%">
+		                <col style="width:3%">
+		                <col style="width:3%">
+		                <col style="width:11%">
+		                <col style="width:9%">
+		                <col style="width:6%">
+		                <col style="width:9%">
+		                <col style="width:7%">
+		            </colgroup>
+		            <thead>
+		                <tr>
+		                    <th scope="col" id="a1" rowspan="2">이용<br>일자</th>
+		                    <th scope="col" id="a2" rowspan="2">이용<br>카드</th>
+		                    <th scope="col" id="a3" rowspan="2">이용<br>가맹점</th>
+		                    <th scope="col" id="a4" rowspan="2">이용<br>금액</th>
+		                    <th scope="col" id="a5" rowspan="2">할<br>부<br>기<br>간</th>
+		                    <th scope="col" id="a6" rowspan="2">회<br>차</th>
+		                    <th scope="colgroup" id="a7" colspan="2">이번달 내실금액</th>
+		                    <th scope="col" id="a8" rowspan="2">적용<br>구분</th>
+		                    <th scope="col" id="a9" rowspan="2">결제<br>후<br>잔액</th>
+		                    <th scope="col" id="a10" rowspan="2">포인트<br>적립율<br>(마이<br>신한<br>포인트)</th>
+		                </tr>
+		                <tr>
+		                    <th scope="col" id="a7-c1" headers="a7">원금</th>
+		                    <th scope="col" id="a7-c2" headers="a7">수수료<br>(이자)</th>
+		                </tr>
+		            </thead>
+		            <tbody data-bind-html="excelBodyArr"><tr>                                                           <td headers="a1">2024.08.01</td>                <td headers="a2">본인540</td>                 <td headers="a3">여기어때</td>               <td headers="a4">134,989</td>                  <td headers="a5">5</td>                  <td headers="a6">5</td>                   <td headers="a7 a7-c1">26,900</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8">무이자</td>               <td headers="a9">0</td>       <td headers="a10">0.00</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.09.05</td>                <td headers="a2">본인540</td>                 <td headers="a3">네이버페이</td>               <td headers="a4">73,260</td>                  <td headers="a5">5</td>                  <td headers="a6">4</td>                   <td headers="a7 a7-c1">14,600</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8">무이자</td>               <td headers="a9">14,600</td>       <td headers="a10">0.00</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.10.06</td>                <td headers="a2">본인540</td>                 <td headers="a3">네이버페이</td>               <td headers="a4">59,188</td>                  <td headers="a5">5</td>                  <td headers="a6">3</td>                   <td headers="a7 a7-c1">11,800</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8">무이자</td>               <td headers="a9">23,600</td>       <td headers="a10">0.00</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.11.13</td>                <td headers="a2">본인540</td>                 <td headers="a3">네이버페이</td>               <td headers="a4">67,492</td>                  <td headers="a5">5</td>                  <td headers="a6">2</td>                   <td headers="a7 a7-c1">13,400</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8">무이자</td>               <td headers="a9">40,200</td>       <td headers="a10">0.00</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.03</td>                <td headers="a2">본인540</td>                 <td headers="a3">주식회사 무신사페이먼츠(MU</td>               <td headers="a4">114,390</td>                  <td headers="a5">5</td>                  <td headers="a6">1</td>                   <td headers="a7 a7-c1">23,190</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8">무이자</td>               <td headers="a9">91,200</td>       <td headers="a10">0.00</td>           </tr>                                                      <tr>                                                                             <th colspan="4" id="ar1">할부 합계</th>                         <td headers="ar1 a5"></td>                                                   <td headers="ar1 a6"></td>                                                   <td headers="ar1 a7-c1"><strong>89,890</strong></td>      <td headers="ar1 a7-c2"><strong>0</strong></td>    <td headers="ar1 a8"></td>                                                   <td headers="ar1 a9"><strong>169,600</strong></td>    <td headers="ar1 a10"></td>                                              </tr>                                                                        <tr>                                                           <td headers="a1">2024.12.02</td>                <td headers="a2">본인540</td>                 <td headers="a3">씨유(CU) 공주대천안캠퍼스점</td>               <td headers="a4">2,800</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">2,800</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">2.50</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.02</td>                <td headers="a2">본인540</td>                 <td headers="a3">네이버페이</td>               <td headers="a4">32,388</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">32,388</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">0.90</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.03</td>                <td headers="a2">본인540</td>                 <td headers="a3">(주)코리아세븐 천안공대점</td>               <td headers="a4">12,000</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">12,000</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">2.50</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.03</td>                <td headers="a2">본인540</td>                 <td headers="a3">씨유(CU) 공주대천안캠퍼스점</td>               <td headers="a4">7,600</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">7,600</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">2.50</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.03</td>                <td headers="a2">본인540</td>                 <td headers="a3">에이블리코퍼레이션</td>               <td headers="a4">4,490</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">4,490</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">0.90</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.04</td>                <td headers="a2">본인540</td>                 <td headers="a3">씨유(CU) 공주대천안캠퍼스점</td>               <td headers="a4">5,700</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">5,700</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">2.50</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.04</td>                <td headers="a2">본인540</td>                 <td headers="a3">씨유(CU) 공주대천안캠퍼스점</td>               <td headers="a4">3,200</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">3,200</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">2.50</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.05</td>                <td headers="a2">본인540</td>                 <td headers="a3">씨유(CU) 공주대천안캠퍼스점</td>               <td headers="a4">3,900</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">3,900</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">2.50</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.05</td>                <td headers="a2">본인540</td>                 <td headers="a3">씨유(CU) 공주대천안캠퍼스점</td>               <td headers="a4">4,500</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">4,500</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">2.50</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.05</td>                <td headers="a2">본인540</td>                 <td headers="a3">씨유(CU) 공주대천안캠퍼스점</td>               <td headers="a4">4,200</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">4,200</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">2.50</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.05</td>                <td headers="a2">본인540</td>                 <td headers="a3">(주)비바리퍼블리카</td>               <td headers="a4">14,686</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">14,686</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">0.90</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.06</td>                <td headers="a2">본인540</td>                 <td headers="a3">뉴욕스탠다드(Newyorkstandard)</td>               <td headers="a4">38,000</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">38,000</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">0.90</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.07</td>                <td headers="a2">본인540</td>                 <td headers="a3">짱오락실 천안신부점</td>               <td headers="a4">1,000</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">1,000</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">0.90</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.07</td>                <td headers="a2">본인540</td>                 <td headers="a3">짱오락실 천안신부점</td>               <td headers="a4">1,000</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">1,000</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">0.90</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.12</td>                <td headers="a2">본인540</td>                 <td headers="a3">씨유(CU) 공주대천안캠퍼스점</td>               <td headers="a4">2,700</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">2,700</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">2.50</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.13</td>                <td headers="a2">본인540</td>                 <td headers="a3">공주대학교 공과대학</td>               <td headers="a4">3,500</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">3,500</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">0.90</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.13</td>                <td headers="a2">본인540</td>                 <td headers="a3">이마트24 천안공주대점</td>               <td headers="a4">4,500</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">4,500</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">1.10</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.13</td>                <td headers="a2">본인540</td>                 <td headers="a3">씨유(CU) 공주대천안캠퍼스점</td>               <td headers="a4">3,200</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">3,200</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">2.50</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.15</td>                <td headers="a2">본인540</td>                 <td headers="a3">이마트24 천안공주대점</td>               <td headers="a4">4,500</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">4,500</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">1.10</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.17</td>                <td headers="a2">본인540</td>                 <td headers="a3">씨유(CU) 공주대천안캠퍼스점</td>               <td headers="a4">4,500</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">4,500</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">2.50</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.17</td>                <td headers="a2">본인540</td>                 <td headers="a3">넷플릭스서비시스코리아 유한회사</td>               <td headers="a4">17,000</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">17,000</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">0.90</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.18</td>                <td headers="a2">본인540</td>                 <td headers="a3">Apple</td>               <td headers="a4">3,300</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">3,300</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">0.90</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.18</td>                <td headers="a2">본인540</td>                 <td headers="a3">(주)신행이엔티</td>               <td headers="a4">28,800</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">28,800</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">0.90</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.19</td>                <td headers="a2">본인540</td>                 <td headers="a3">CU 천안두정누리점</td>               <td headers="a4">4,500</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">4,500</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">2.50</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.21</td>                <td headers="a2">본인540</td>                 <td headers="a3">(주)코리아세븐 천안공대점</td>               <td headers="a4">1,900</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">1,900</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">2.50</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.21</td>                <td headers="a2">본인540</td>                 <td headers="a3">이마트24 천안공주대점</td>               <td headers="a4">4,500</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">4,500</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">1.10</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.26</td>                <td headers="a2">본인540</td>                 <td headers="a3">범맥주 군산수송점</td>               <td headers="a4">9,600</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">9,600</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">0.90</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.26</td>                <td headers="a2">본인540</td>                 <td headers="a3">씨유(CU) 군산은파점</td>               <td headers="a4">4,500</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">4,500</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">2.50</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.29</td>                <td headers="a2">본인540</td>                 <td headers="a3">심쿵회수산</td>               <td headers="a4">68,000</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">68,000</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">0.90</td>           </tr>                                                      <tr>                                                           <td headers="a1">2024.12.29</td>                <td headers="a2">본인540</td>                 <td headers="a3">쓰리팝피씨방공주대점</td>               <td headers="a4">5,000</td>                  <td headers="a5"></td>                  <td headers="a6"></td>                   <td headers="a7 a7-c1">5,000</td>      <td headers="a7 a7-c2">0</td>    <td headers="a8"></td>               <td headers="a9">0</td>       <td headers="a10">0.90</td>           </tr>                                                      <tr>                                                                             <th colspan="4" id="ar1">일시불(일반) 소계</th>                         <td headers="ar1 a5"></td>                                                   <td headers="ar1 a6"></td>                                                   <td headers="ar1 a7-c1"><strong>305,464</strong></td>      <td headers="ar1 a7-c2"><strong>0</strong></td>    <td headers="ar1 a8"></td>                                                   <td headers="ar1 a9"><strong>0</strong></td>    <td headers="ar1 a10"></td>                                              </tr>    							                                         <tr>                                                                             <th colspan="4" id="ar1">일시불 합계</th>                         <td headers="ar1 a5"></td>                                                   <td headers="ar1 a6"></td>                                                   <td headers="ar1 a7-c1"><strong>305,464</strong></td>      <td headers="ar1 a7-c2"><strong>0</strong></td>    <td headers="ar1 a8"></td>                                                   <td headers="ar1 a9"><strong>0</strong></td>    <td headers="ar1 a10"></td>                                              </tr>   							                                           <tr>                                                                             <th colspan="4" id="ar1">총합계</th>                         <td headers="ar1 a5"></td>                                                   <td headers="ar1 a6"></td>                                                   <td headers="ar1 a7-c1"><strong>395,354</strong></td>      <td headers="ar1 a7-c2"><strong>0</strong></td>    <td headers="ar1 a8"></td>                                                   <td headers="ar1 a9"><strong>169,600</strong></td>    <td headers="ar1 a10"></td>                                              </tr>                                                                        </tbody>
+		            <tfoot>
+	                    <tr data-bind-visible="!visibleBody" style="display: none;">
+	                        <th colspan="11">이용일자별 카드사용내역이 없습니다.</th>
+	                    </tr>
+	                </tfoot>
+		        </table>
+	        </td>
+	    </tr>
+	    <tr><td>&nbsp;</td></tr>
+	    <tr>
+	    	<td>
+	    		<table border="1" data-bind-visible="visibleLoan" style="display: none;">
+		            <caption>장기카드대출(카드론) 이용내역</caption>
+		            <colgroup>
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		            </colgroup>
+		            <thead>
+		                <tr>
+		                    <th scope="col" id="h1" rowspan="2">대출일자</th>
+		                    <th scope="col" id="h2" rowspan="2">대출내역</th>
+		                    <th scope="col" id="h3" rowspan="2">대출원금</th>
+		                    <th scope="col" id="h4" rowspan="2">대출기간</th>
+		                    <th scope="col" id="h5" rowspan="2">대출회차</th>
+		                    <th scope="colgroup" id="h6" colspan="2">이번 달 내실 금액</th>
+		                    <th scope="col" id="h7" rowspan="2">결제후<br>대출잔액</th>
+		                </tr>
+		                <tr>
+		                    <th scope="col" id="h6-c1" headers="a6">원금</th>
+		                    <th scope="col" id="h6-c2" headers="a6">수수료<br>(이자)</th>
+		                </tr>
+		            </thead>
+		            <tbody data-bind-each="loanArr"></tbody>
+		            <tfoot>
+	                    <tr data-bind-visible="visibleLoan" style="display: none;">
+	                        <th scope="row" colspan="5" id="hr1">합계</th>
+	                        <td headers="h6 h6-c1 hr1"><strong data-bind-text="use_amt_sum"></strong></td>
+	                        <td headers="h6 h6-c2 hr1"><strong data-bind-text="use_fee_sum"></strong></td>
+	                        <td headers="h7 hr1"><strong data-bind-text="use_af_sum"></strong></td>
+	                    </tr>
+	                    <tr data-bind-visible="!visibleLoan" style="">
+	                        <th colspan="8">장기카드대출 이용내역이 없습니다.</th>
+	                    </tr>
+	                </tfoot>
+		        </table>
+	    	</td>
+	    </tr>
+	    <tr><td>&nbsp;</td></tr>
+	    <tr>
+	    	<td>
+	    		<table border="1">
+		            <caption>취소매출 상세내역</caption>
+		            <colgroup>
+		                <col style="width:10%">
+		                <col style="width:auto">
+		                <col style="width:10%">
+		                <col style="width:10%">
+		                <col style="width:10%">
+		                <col style="width:10%">
+		                <col style="width:10%">
+		                <col style="width:10%">
+		                <col style="width:10%">
+		            </colgroup>
+		            <thead>
+		                <tr>
+		                    <th scope="col">이용일자</th>
+		                    <th scope="col">이용카드</th>
+		                    <th scope="col">상품구분</th>
+		                    <th scope="col">이용가맹점</th>
+		                    <th scope="col">원거래금액</th>
+		                    <th scope="col">취소하신 금액</th>
+		                    <th scope="col">취소일자</th>
+		                    <th scope="col">처리일자</th>
+		                    <th scope="col">처리결과</th>
+		                </tr>
+		            </thead>
+		            <tfoot>
+	                    <tr data-bind-visible="cancelData_excel.length < 1" style="">
+	                        <th colspan="9">취소매출 내역이 없습니다.</th>
+	                    </tr>
+	                </tfoot>
+		            <tbody data-bind-each="cancelData_excel"></tbody>
+		        </table>
+	    	</td><td>
+	    </td></tr>
+	    <tr><td>&nbsp;</td></tr>
+	    <tr>
+	    	<td>
+	    		<table border="1">
+		            <caption>할인혜택 상세내역 목록</caption>
+		            <colgroup>
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		            </colgroup>
+		            <thead>
+		                <tr>
+		                    <th scope="col" id="c1" rowspan="2">이용일자</th>
+		                    <th scope="col" id="c2" rowspan="2">이용가맹점</th>
+		                    <th scope="col" id="c3" rowspan="2">적용구분</th>
+		                    <th scope="colgroup" id="c4" colspan="2">이용금액</th>
+		                    <th scope="colgroup" id="c5" colspan="2">할인금액</th>
+		                    <th scope="col" id="c6" rowspan="2">할인내역</th>
+		                </tr>
+		                <tr>
+		                    <th scope="col" id="c4-c1" headers="b4">원금</th>
+		                    <th scope="col" id="c4-c2" headers="b4">수수료</th>
+		                    <th scope="col" id="c5-c1" headers="b5">원금</th>
+		                    <th scope="col" id="c5-c2" headers="b5">수수료</th>
+		                </tr>
+		            </thead>
+		             <tfoot>
+	                    <tr data-bind-visible="dcnt_amt_sum > 0" style="display: none;">
+	                        <th scope="row" colspan="5" id="cr1">합계</th>
+	                        <td headers="c5 c5-c1 cr1"><strong data-bind-text="dcnt_amt_sum">0</strong></td>
+	                        <td headers="c5 c5-c2 cr1"><strong data-bind-text="dcnt_amt_fee_sum">5,648</strong></td>
+	                        <td>&nbsp;</td>
+	                    </tr>
+	                    <tr data-bind-visible="dcnt_amt_sum < 1" style="">
+	                        <th colspan="8">할인혜택 상세내역이 없습니다.</th>
+	                    </tr>
+	                </tfoot>
+		            <tbody data-bind-each="discountData_excel">
+		                <tr>
+		                    <td headers="c1">2024.12.03</td>
+		                    <td headers="c2">주식회사 무신사페이먼츠(MU</td>
+		                    <td headers="c3">무이자할부</td>
+		                    <td headers="c4 c4-c1">114,390</td>
+		                    <td headers="c4 c4-c2">5,648</td>
+		                    <td headers="c5 c5-c1">0</td>
+		                    <td headers="c5 c5-c2">5,648</td>
+		                    <td headers="c6">할부수수료　면제</td>
+		                </tr>
+		            </tbody>
+		        </table>
+	    	</td>
+	    </tr>
+	    <tr><td>&nbsp;</td></tr>
+	    <tr>
+	    	<td>
+	    		<table border="1">
+		            <caption>종합통장대출 상세내역</caption>
+		            <colgroup>
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		                <col style="width:">
+		            </colgroup>
+		            <thead>
+		                <tr>
+		                    <th scope="col">대출일자</th>
+		                    <th scope="col">만기일자</th>
+		                    <th scope="col">약정한도</th>
+		                    <th scope="col" colspan="2">대출잔액</th>
+		                    <th scope="col" colspan="2">이자율</th>
+		                    <th scope="col">구분</th>
+		                </tr>
+		            </thead>
+		            <tfoot>
+	                    <tr data-bind-visible="bankLoanData_excel.length < 1" style="">
+	                        <th colspan="8">종합통장대출 상세내역이 없습니다.</th>
+	                    </tr>
+	                </tfoot>
+		            <tbody data-bind-each="bankLoanData_excel"></tbody>
+		        </table>
+	    	</td><td>
+	    </td></tr>
+	    <tr><td><strong>※ 단기카드 대출(현금서비스)의 경우 상기 이용금액상의 수수료에는 CD기 이용수수료(700원 ~ 1,200원)는 포함되어 있습니다.</strong></td><td></td></tr>
+	</tbody></table>
+	</body> </html> 
